@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+.hero{
+    width: 100vw;
+    height: 100vh;
+}
 .hero img{
     width: 100vw;
     height: 100vh;
+    min-height: 50vh;
 }
 *{
     font-family: 'Lato', sans-serif;
@@ -11,22 +16,24 @@
 }
 .intro{
     position: absolute;
-    left: 40vw;
-    top: 40vh;
+    left: 35vw;
+    top: 7vh;
 }
 .intro h1{
-    color: #00ff9d;
+    color:pink;
     font-size: 64px;
 
 }
 .intro h2{
     color: #fff;
     font-size: 32px;
+    font-weight: 400;
 }
 .intro h2 p{
     font-size: 60px;
     display: inline;
     color:yellow;
+    font-weight: 400;
 }
 .blackbox{
     display: flex;
@@ -46,61 +53,93 @@
 }
 
 .cards{
-    padding-top: 40px;
-    display: flex;
-    justify-content: space-evenly;
-    padding-left: 10vw;
+    position: relative;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto minmax(340,1fr);
+    grid-gap: 4vw;
+    justify-content: center;
+    align-items: center;
+    grid-auto-flow: column;
+
+    
+
 }
-.card{
+.grid-item{
+    position: relative;
+    width: 20vw;
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: auto;
-    background-color: rgb(206, 255, 121);
+    height: 400px;
     border-radius: 10px;
     align-items: center;
-    justify-content: center;
     box-shadow: 0px 2px 5px 0px #000;
-    
+    margin: 0;
+    padding: 0;
+
 }
-.card img{
-    width: 300px;
+.grid-item img{
+    width: 20vw;
     height: auto;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    margin-bottom: 10px;
 
 }
-.card h3{
+.grid-item h3{
     padding: 10px;
+    color: black;
 }
-.card p{
+.grid-item p{
     padding: 10px;
+    color: black;
 }
 
 .bottom{
     padding: 100px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     
 }
 .bottomcard{
-    width: 450px;
+    margin: 0;
+    width:auto;
     height: auto;
     display: flex;
     flex-direction: column;
     border: 2px solid;
     padding: 10px;
+    padding-bottom: 20px;
 }
 .bottomcard h2{
     padding: 10px;
+    font-size: 40px;
 }
 
 .bottomcard p{
     padding: 10px;
+    font-size: 12px;
 }
 #contactus{
-    background-color: rgb(23, 93, 0);
+    background-color: rgb(60, 94, 47);
 }
 #aboutme{
-    background-color: brown;
+    background-color: rgb(129, 36, 36);
+}
+
+@media screen and (max-width: 786px) {
+    .hero{
+        min-width: 50vh;
+    }
+    .blackbox h3{
+        font-size: 24px;
+    }
+    .bottom{
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+    }
+    .blackbox h3 span{
+        font-size: 24px;
+    }
 }
